@@ -1,0 +1,21 @@
+# Local generation on an NVIDIA GPU (WHATIF_IMAGE_PROVIDER=sdxl_turbo, WHATIF_MATTING_MODEL=birefnet).
+#
+# 1) PyTorch + torchvision with CUDA first (tested: Python 3.14, driver 551.95, RTX 3080 Laptop 16 GB):
+#      pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+#    torchvision MUST come from the same index: timm otherwise pulls a CPU-only build from PyPI.
+#    Pick the CUDA build your driver supports (driver 551 = CUDA 12.x).
+# 2) then:  pip install -r requirements-gpu.txt
+#
+# Measured: SDXL-Turbo 4 steps ~0.8 s, BiRefNet fp16 ~0.27 s, TripoSR ~3 s; ~13.5 GB VRAM peak.
+-r requirements.txt
+diffusers>=0.30
+transformers>=4.44
+accelerate>=0.33
+# BiRefNet model code (loaded from Hugging Face, pinned revision) imports these:
+timm>=1.0
+kornia>=0.7
+einops>=0.8
+# TripoSR image-to-3D (WHATIF_MESH_PROVIDER=triposr); code is cloned separately, see README
+omegaconf>=2.3
+scikit-image>=0.22      # replaces TripoSR's compiled torchmcubes
+fast-simplification>=0.1  # mesh decimation to WHATIF_MESH_MAX_FACES

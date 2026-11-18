@@ -1,0 +1,43 @@
+# Python
+server/.venv/
+server/data/
+server/.env
+__pycache__/
+.pytest_cache/
+
+# Unity
+unity/WhatIf/[Ll]ibrary/
+unity/WhatIf/[Tt]emp/
+unity/WhatIf/[Oo]bj/
+unity/WhatIf/[Bb]uild/
+unity/WhatIf/[Bb]uilds/
+unity/WhatIf/[Ll]ogs/
+unity/WhatIf/[Uu]ser[Ss]ettings/
+unity/WhatIf/*.csproj
+unity/WhatIf/*.sln
+unity/WhatIf/.vs/
+*.apk
+
+# cloned model code (see README: real 3D)
+server/third_party/
+
+# Vosk binaries and model (fetched by unity/setup_vosk.ps1)
+unity/WhatIf/Assets/Plugins/Vosk/
+unity/WhatIf/Assets/Plugins/x86_64/
+unity/WhatIf/Assets/Plugins/Android/libs/
+unity/WhatIf/Assets/StreamingAssets/vosk-model-*/
+
+# Magic Leap Unity SDK (embedded package; install via Magic Leap Hub, see README)
+unity/WhatIf/Packages/com.magicleap.unitysdk/
+
+# Unity generated, machine-local
+unity/WhatIf/Assets/XR/Temp/
+unity/WhatIf/Assets/XR/Temp.meta
+unity/WhatIf/Assets/Resources/PerformanceTestRun*
+unity/WhatIf/.idea/
+
+# local recordings, logs and old reports (not part of the project)
+Videos/
+server_log*.txt
+report.html
+whatif_model_pipeline.svg

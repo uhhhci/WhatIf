@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2938ea20faface439942e759a232b3e, type: 3}
+  m_Name: WhatIfSettings
+  m_EditorClassIdentifier: 
+  serverUrl: http://192.168.0.42:8000
+  pollIntervalS: 0.5
+  assetTimeoutS: 300
+  defaultHeadHeightM: 1.65
+  sendCameraFrame: 1
+  markSurfacesInImage: 1
+  cameraFrameMaxSize: 768
+  prefer3D: 1
+  billboardMaterial: {fileID: 0}
+  waterMaterial: {fileID: 0}
+  anchorContent: 0
+  contactShadows: 1
+  castShadows: 1
+  showCutoutsFirst: 0
+  englishOnly: 1
+  showSuggestions: 0
+  castShadowStrength: 0.5
+  lightEstimation: 1
+  lightEstimateReference: 0.04
+  loadingEffects: 1
+  shadowStrength: 0.5
+  enableVoice: 1
+  segmentedDimming: 1
+  continuousListening: 1
+  ownVoiceOnly: 1
+  ownVoiceMarginDb: 12
+  voiceNeedsGaze: 1
+  triangleBudget: 1200000
+  occlusion: 1
+  occludeFurniture: 0
+  depthCamera: 1
+  matchRoomLight: 0
+  pinchGrab: 1
+  grabMaxSizeM: 2
+  dropWithPhysics: 1
+  sounds: 1
+  behaviours: 1
+  ambienceVolume: 0.3
+  objectSoundVolume: 0.7
+  naturalRequests: 1
+  followUpSeconds: 8
+  voskModelFolder: vosk-model-small-en-us-0.15
+  germanKeyword: 1
+  voskGermanModelFolder: vosk-model-small-de-0.15
+  voiceEndSilenceS: 1
+  voiceMaxSeconds: 12
+  clearPhrases:
+  - empty again
+  - as it was
+  - back to normal
+  - clear everything
+  controlLighting: 1
+  sunIntensity: 0.7
+  sunAngles: {x: 50, y: -30}
+  ambientColor: {r: 0.35, g: 0.35, b: 0.38, a: 1}
+  editorGround: 1
+  presetPrompts:
+  - What if this place had more plants?
+  - What if this place had fewer cars?
+  - What if this place were flooded?
+  - What if this place were inhabited by dinosaurs?
