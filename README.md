@@ -1,6 +1,12 @@
-# What If?
+# What if…
 
-**Say a wish and see it appear in the room around you, on the Magic Leap 2.**
+**… an augmented reality app could show everything you can imagine?**
+
+<a href="https://www.youtube.com/watch?v=FM3VyoRfFZ4">
+  <img src="docs/images/video.jpg" width="720" alt="Watch the What If video on YouTube: an empty corridor turns into a jungle">
+</a>
+
+<sub>▶ [Watch the video on YouTube](https://www.youtube.com/watch?v=FM3VyoRfFZ4)</sub>
 
 What If is an augmented reality app for the Magic Leap 2. You speak a wish. A GPU server plans the
 scene and then downloads a real 3D model or generates one. The headset places each object in your
@@ -50,7 +56,10 @@ patch of moss, sand or water, and sound is picked or made for the wish while you
 
 ## How it works
 
-![System overview: user, Magic Leap 2, GPU server; download or generate](docs/architecture_overview.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/architecture_overview_dark.svg">
+  <img src="docs/architecture_overview.svg" alt="System overview: user, Magic Leap 2, GPU server; download or generate">
+</picture>
 
 The headset sends the spoken wish and a camera picture to the server. The planner answers with a
 scene plan that is streamed item by item, so the first objects start while the plan is still being
@@ -60,7 +69,10 @@ model, or generates one. The headset places objects as soon as they arrive.
 <details>
 <summary><b>The models in detail</b></summary>
 
-![Model pipeline: Whisper, Qwen planner, CLIP library, SDXL-Turbo, BiRefNet, CLIP, Objaverse or SPAR3D, placement](docs/model_pipeline.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/model_pipeline_dark.svg">
+  <img src="docs/model_pipeline.svg" alt="Model pipeline: Whisper, Qwen planner, CLIP library, SDXL-Turbo, BiRefNet, CLIP, Objaverse or SPAR3D, placement">
+</picture>
 
 | Step | Model | Role |
 |---|---|---|
